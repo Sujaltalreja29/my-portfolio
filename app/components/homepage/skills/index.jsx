@@ -49,7 +49,7 @@ function Skills() {
                   <div className="h-8 sm:h-10">
                     <Image
                       src={skillsImage(skill)?.src}
-                      alt={skill}
+                      alt="skill"
                       width={40}
                       height={40}
                       className="h-full w-auto rounded-lg"

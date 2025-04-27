@@ -10,9 +10,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.3.1",
+    "@emailjs/browser": "^4.4.1",
     "@next/third-parties": "15.1.1",
     "axios": "^1.6.8",
+    "framer-motion": "^12.9.2",
     "lottie-react": "^2.4.1",
     "next": "15.1.1",
     "nodemailer": "^6.9.15",
@@ -21,7 +22,7 @@
     "react-fast-marquee": "^1.6.2",
     "react-google-recaptcha": "^3.1.0",
     "react-icons": "^4.11.0",
-    "react-toastify": "^10.0.4",
+    "react-toastify": "^11.0.5",
     "sharp": "^0.33.5"
   },
   "devDependencies": {

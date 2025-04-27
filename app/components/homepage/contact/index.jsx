@@ -2,88 +2,114 @@
 import { personalData } from '@/utils/data/personal-data';
 import Link from 'next/link';
 import { BiLogoLinkedin } from "react-icons/bi";
-import { CiLocationOn } from "react-icons/ci";
-import { FaFacebook, FaStackOverflow } from 'react-icons/fa';
-import { FaXTwitter } from "react-icons/fa6";
-import { IoLogoGithub, IoMdCall } from "react-icons/io";
-import { MdAlternateEmail } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
+import { MdAlternateEmail, MdPhone } from "react-icons/md";
+import { SiLeetcode } from "react-icons/si";
 import ContactForm from './contact-form';
 
 function ContactSection() {
   return (
-    <div id="contact" className="my-12 lg:my-16 relative mt-24 text-white">
-      <div className="hidden lg:flex flex-col items-center absolute top-24 -right-8">
-        <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
-          CONTACT
-        </span>
-        <span className="h-36 w-[2px] bg-[#1a1443]"></span>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+    <div id="contact" className="flex flex-col lg:flex-row gap-8 my-12 lg:my-16 relative mt-24 text-white">
+      {/* Left Side - Contact Form */}
+      <div className="w-full lg:w-1/2 bg-[#1a1c26] p-8 rounded-lg">
+        <h2 className="text-2xl font-bold mb-6">Send Me a Message</h2>
         <ContactForm />
-        <div className="lg:w-3/4 ">
-          <div className="flex flex-col gap-5 lg:gap-9">
-            <p className="text-sm md:text-xl flex items-center gap-3">
-              <MdAlternateEmail
-                className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={36}
-              />
-              <span>{personalData.email}</span>
-            </p>
-            <p className="text-sm md:text-xl flex items-center gap-3">
-              <IoMdCall
-                className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={36}
-              />
-              <span>
-                {personalData.phone}
-              </span>
-            </p>
-            <p className="text-sm md:text-xl flex items-center gap-3">
-              <CiLocationOn
-                className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={36}
-              />
-              <span>
-                {personalData.address}
-              </span>
-            </p>
+      </div>
+      
+      {/* Right Side - Contact Information */}
+      <div className="w-full lg:w-1/2 lg:pl-12 flex flex-col justify-center">
+        <h2 className="text-2xl font-bold mb-8">Contact Information</h2>
+        
+        <div className="space-y-8">
+          {/* Phone */}
+          <div className="flex items-center gap-4">
+            <div className="bg-[#252734] p-3 rounded-lg flex items-center justify-center min-w-[50px] min-h-[50px]">
+              <MdPhone className="text-purple-500" size={24} />
+            </div>
+            <div>
+              <p className="text-gray-400 text-sm">Phone</p>
+              <a 
+                href={`tel:${personalData.phone || "+91-9998537189"}`}
+                className="text-lg hover:text-purple-500 transition-colors duration-300"
+              >
+                {personalData.phone || "+91-9998537189"}
+              </a>
+            </div>
           </div>
-          <div className="mt-8 lg:mt-16 flex items-center gap-5 lg:gap-10">
-            <Link target="_blank" href={personalData.github}>
-              <IoLogoGithub
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={48}
-              />
-            </Link>
-            <Link target="_blank" href={personalData.linkedIn}>
-              <BiLogoLinkedin
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={48}
-              />
-            </Link>
-            <Link target="_blank" href={personalData.twitter}>
-              <FaXTwitter
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={48}
-              />
-            </Link>
-            <Link target="_blank" href={personalData.stackOverflow}>
-              <FaStackOverflow
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={48}
-              />
-            </Link>
-            <Link target="_blank" href={personalData.facebook}>
-              <FaFacebook
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={48}
-              />
-            </Link>
+          
+          {/* Email */}
+          <div className="flex items-center gap-4">
+            <div className="bg-[#252734] p-3 rounded-lg flex items-center justify-center min-w-[50px] min-h-[50px]">
+              <MdAlternateEmail className="text-purple-500" size={24} />
+            </div>
+            <div>
+              <p className="text-gray-400 text-sm">Email</p>
+              <a 
+                href={`mailto:${personalData.email || "sujaltlrj@gmail.com"}`}
+                className="text-lg hover:text-purple-500 transition-colors duration-300"
+              >
+                {personalData.email || "sujaltlrj@gmail.com"}
+              </a>
+            </div>
+          </div>
+          
+          {/* LinkedIn */}
+          <div className="flex items-center gap-4">
+            <div className="bg-[#252734] p-3 rounded-lg flex items-center justify-center min-w-[50px] min-h-[50px]">
+              <BiLogoLinkedin className="text-purple-500" size={24} />
+            </div>
+            <div>
+              <p className="text-gray-400 text-sm">LinkedIn</p>
+              <a 
+                href={personalData.linkedIn || "https://linkedin.com"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg hover:text-purple-500 transition-colors duration-300"
+              >
+                {personalData.linkedIn ? personalData.linkedIn.replace('https://', '') : 'linkedin.com/in/username'}
+              </a>
+            </div>
+          </div>
+          
+          {/* GitHub */}
+          <div className="flex items-center gap-4">
+            <div className="bg-[#252734] p-3 rounded-lg flex items-center justify-center min-w-[50px] min-h-[50px]">
+              <FaGithub className="text-purple-500" size={24} />
+            </div>
+            <div>
+              <p className="text-gray-400 text-sm">GitHub</p>
+              <a 
+                href={personalData.github || "https://github.com"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg hover:text-purple-500 transition-colors duration-300"
+              >
+                {personalData.github ? personalData.github.replace('https://', '') : 'github.com/username'}
+              </a>
+            </div>
+          </div>
+          
+          {/* LeetCode */}
+          <div className="flex items-center gap-4">
+            <div className="bg-[#252734] p-3 rounded-lg flex items-center justify-center min-w-[50px] min-h-[50px]">
+              <SiLeetcode className="text-purple-500" size={24} />
+            </div>
+            <div>
+              <p className="text-gray-400 text-sm">LeetCode</p>
+              <a 
+                href={personalData.leetcode || "https://leetcode.com"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg hover:text-purple-500 transition-colors duration-300"
+              >
+                {personalData.leetcode ? personalData.leetcode.replace('https://', '') : 'leetcode.com/username'}
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default ContactSection;

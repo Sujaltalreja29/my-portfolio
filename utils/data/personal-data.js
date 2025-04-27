@@ -2,16 +2,18 @@ export const personalData = {
   name: "Sujal Talreja",
   profile: '/profile.png',
   designation: "Software Developer",
-  description: "My name is Sujal Talreja. I am a professional and enthusiastic programmer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love almost all the stacks of web application development and love to make the web more open to the world. My core skill is based on JavaScript and I love to do most of the things using JavaScript. I am available for any kind of job opportunity that suits my skills and interests.",
+  description: "I'm Sujal Talreja, a passionate and solution-oriented software developer specializing in building robust web applications with modern technologies.\n\n" +
+    "My expertise centers on JavaScript-based development, creating scalable and intuitive applications across the full stack. I've worked extensively with various web frameworks and libraries, continuously expanding my technical toolkit through self-directed learning.\n\n" +
+    "I'm actively seeking opportunities that leverage my JavaScript expertise while challenging me to grow as a developer in collaborative environments.",
   email: 'sujaltlrj@gmail.com',
   phone: '+91 9998537189',
-  address: 'Shreeji Park, Navsari, India - 396445 ',
+  address: 'Shreeji Park, Navsari, India - 396445',
   github: 'https://github.com/sujaltalreja29',
   facebook: 'https://www.facebook.com/abusaid.riyaz/',
   linkedIn: 'https://www.linkedin.com/in/sujal-talreja/',
   twitter: 'https://twitter.com/said7388',
   stackOverflow: 'https://stackoverflow.com/users/16840768/abu-said',
-  leetcode: "https://leetcode.com/said3812/",
+  leetcode: "https://leetcode.com/u/Sujaltalreja29/",
   devUsername: "said7388",
   resume: "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing"
 }
