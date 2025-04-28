@@ -12,6 +12,15 @@ export const projectItems = {
     ],
     reactjs: [
       {
+        id: "Flavor-Fusion",
+        title: "Flavor Fusion: Restaurant management system",
+        description:
+          "A full-stack web application that streamlines restaurant operations by providing an integrated platform for both customers and administrators. Customers can browse menu items, customize orders, track delivery status, and view their order history. Administrators have tools to manage menu items, update order statuses, and oversee operations. The system features an intuitive, responsive UI with modern animations and transitions for an enhanced user experience. Built with React.js for the frontend and Node.js for the backend, the application demonstrates secure authentication practices, efficient state management, and scalable architecture for a seamless dining management solution.",
+        websiteLink: "https://flavour-fusion-sujaltlrj.vercel.app/",
+        sourceLink: "https://github.com/Sujaltalreja29/full-stack-task-management-app",
+        techStacks: ["ReactJS", "TailwindCSS", "NodeJS", "JavaScript"],
+      },
+      {
         id: "Mega-blogs",
         title: "Mega Blogs",
         description:
